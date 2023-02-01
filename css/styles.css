@@ -380,23 +380,27 @@ body {
   height: 88px;
 }
 .cast-link {
-  width: 100%;
-  height: 100%;
-  border: 1px solid var(--company);
-  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
   color: var(--company);
+  border: 1px solid var(--company);
+  border-radius: 4px;
+}
+
+.cast-link:is(:hover, :focus) {
+  color: var(--hover-color);
+  border-color: 1px solid var(--hover-color);
 }
 .cast-soc-icon {
   fill: currentColor;
 }
-.cast-link:is(:hover, :focus) {
-  border-color: var(--hover-color);
-}
 .cast-link:is(:hover, :focus) .cast-soc-icon {
-  fill: var(--hover-color);
+  fill: currentColor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* -----------------------------FOOTER------------------------ */
@@ -517,7 +521,6 @@ body {
 }
 .cards-list {
   flex-basis: calc((100% - 72px) / 3);
-  border: 0.5px solid var(--footer-logo-studio-color);
 }
 
 .container-text {
@@ -528,8 +531,8 @@ body {
   border-left: 1px solid var(--footer-text-color);
   border-bottom: 1px solid var(--footer-text-color);
 }
-.deco-link{
-
+.deco-link {
+  display: block;
 }
 .deco-link:is(:hover, :focus) {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
