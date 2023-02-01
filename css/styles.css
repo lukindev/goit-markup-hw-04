@@ -6,6 +6,11 @@
   --white-color: #ffffff;
   --footer-logo-studio-color: #f4f4fd;
   --footer-text-color: #e7e9fc;
+  --hero-grd: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+  --black-color: #000000;
+  --company: #8E8F99;
+  --hover-footer: #31D0AA;
+  --soc-bc-footer:  #ffffff1a;
 }
 
 .visually-hidden {
@@ -157,6 +162,10 @@ body {
   padding-top: 188px;
   padding-bottom: 188px;
   background: var(--navigation-color);
+  background: var(--hero-grd), url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .container-main {
 }
@@ -232,6 +241,14 @@ body {
 }
 .qualities-list-tehnologies-name {
 }
+.qual-icon {
+  
+ margin-bottom: 8px;
+ background: var(--footer-logo-studio-color);
+border-radius: 4px;
+margin-left: 45%;
+
+}
 /* -----------------------WORKS------------------------- */
 .works {
   padding-top: 0;
@@ -295,6 +312,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--contacts-color);
+  margin-bottom: 8px;
 }
 .team-list-person {
   background: var(--white-color);
@@ -309,11 +327,90 @@ body {
   background-color: var(--white-color);
 }
 
+.team-soc-list {
+display: flex;
+justify-content: center;
+gap: 24px;
+
+}
+
+.team-soc-items {
+  width: 40px;
+  height: 40px;
+}
+.team-soc-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--logo-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.team-soc-icon{
+  fill: var(--footer-logo-studio-color);
+}
+.team-soc-link:is(:hover, :focus) {
+background-color: var(--hover-color);
+}
+/* ----------------------CUSTOMERS------------------ */
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+.sec-name{
+font-size: 36px;
+line-height: 1.11;
+text-align: center;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+color:var(--navigation-color);
+margin-bottom: 72px;
+
+}
+.cast-list{
+  display: flex;
+  gap: 24px;
+  
+
+}
+.container {
+}
+.cast {
+  width: calc((100% - 120px) / 6);
+  height: 88px;
+}
+.cast-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--company);
+border-radius: 4px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: var(--company);
+}
+.cast-soc-icon{
+  fill: currentColor;
+}
+.cast-link:is(:hover, :focus) {
+border-color: var(--hover-color);
+}
+.cast-link:is(:hover, :focus) .cast-soc-icon {
+  fill:var(--hover-color);
+}
+
 /* -----------------------------FOOTER------------------------ */
 .footer {
   background: var(--navigation-color);
   padding-top: 100px;
   padding-bottom: 100px;
+  display:flex;
+}
+.logo-container{
+   margin-left: 156px;
+  margin-right: 120px;
+
 }
 .footer-logo {
   font-family: "Raleway", sans-serif;
@@ -336,6 +433,46 @@ body {
   width: 264px;
   margin-top: 16px;
 }
+.soc-footer{
+  margin: 0;
+ }
+.soc-footer-text {
+ color: var(--white-color);
+   font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+margin-bottom: 16px;
+}
+
+
+.footer-soc-list {
+display: flex;
+justify-content: center;
+gap: 16px;
+
+}
+
+.footer-soc-items {
+  width: 40px;
+  height: 40px;
+}
+.footer-soc-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--soc-bc-footer) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.footer-soc-icon{
+  fill: var(--footer-logo-studio-color);
+}
+.footer-soc-link:is(:hover, :focus) {
+background-color: var(--hover-footer);
+}
+
 
 /* -------------------PAGE2---PORTFOLIO------FILTERS--------- */
 .portfolio {
@@ -386,7 +523,9 @@ body {
 }
 .cards-list {
   flex-basis: calc((100% - 72px) / 3);
+  
 }
+
 .container-text {
   padding-left: 16px;
   padding-top: 32px;
@@ -394,6 +533,10 @@ body {
   border-right: 1px solid var(--footer-text-color);
   border-left: 1px solid var(--footer-text-color);
   border-bottom: 1px solid var(--footer-text-color);
+}
+.cards-list:is(:hover, :focus){
+border: 0.5px solid #F4F4FD;
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .cards-name {
   font-weight: 500;
